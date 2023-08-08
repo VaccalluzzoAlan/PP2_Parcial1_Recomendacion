@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <title>Recomendación</title>
+</head>
+<body>
+    <nav class="navbar sticky-top navbar-expand-sm bg-dark" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Multimedios</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-2">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="true" href="./index.html#recomendaciones">Recomendaciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html#trailers">Trailers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled link-primary link-opacity-50" href="#">Suscripción</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid d-flex justify-content-center align-items-center bg-primary w-100" style="height: 10em;">
+        <span class="h1 text-white fs-1 text-center">Forma de Suscripción</span>
+    </div>
+
+    <div class="container-fluid d-flex justify-content-center flex-column gap-3 bg-secondary-subtle w-100 p-3">
+        <form>
+            <div class="mb-3">
+                <label for="email" class="form-label">E-mail</label>
+                <input type="email" name="E-mail" id="email" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="contrasena" class="form-label">Contraseña</label>
+                <input type="password" name="Contraseña" id="contrasena" class="form-control">
+            </div>
+
+            <p class="mb-2">Notificaciones:</p>
+            <div class="mb-2 form-check">
+                <input class="form-check-input" type="radio" name="Notificaciones" id="diarias">
+                <label class="form-check-label" for="diarias">Diarias</label>
+            </div>
+            <div class="mb-2 form-check">
+                <input class="form-check-input" type="radio" name="Notificaciones" id="semanales">
+                <label class="form-check-label" for="semanales">Semanales</label>
+            </div>
+            <div class="mb-2 form-check">
+                <input class="form-check-input" type="radio" name="Notificaciones" id="mensuales">
+                <label class="form-check-label" for="mensuales">Mensuales</label>
+            </div>
+            <div class="mb-2 form-check">
+                <input class="form-check-input" type="radio" name="Notificaciones" id="anuales">
+                <label class="form-check-label" for="anuales">Anuales</label>
+            </div>
+            <div class="mb-3 form-check">
+                <input class="form-check-input" type="radio" name="Notificaciones" id="desactivadas">
+                <label class="form-check-label" for="desactivadas">Desactivadas</label>
+            </div>
+            
+            <p class="mb-2">Tipo de recomendaciones:</p>
+            <div class="mb-2 form-check">
+                <input class="form-check-input" type="checkbox" name="Tipo" id="peliculas" value="peliculas">
+                <label class="form-check-label" for="peliculas">Peliculas</label>
+            </div>
+            <div class="mb-2 form-check">
+                <input class="form-check-input" type="checkbox" name="Tipo" id="series" value="series">
+                <label class="form-check-label" for="series">Series</label>
+            </div>
+            <div class="mb-3 form-check">
+                <input class="form-check-input" type="checkbox" name="Tipo" id="libros" value="libros">
+                <label class="form-check-label" for="libros">Libros</label>
+            </div>
+
+            <div class="mb-4">
+                <label for="lista" class="form-label">Clasificacion de edad más alta (no se recomendaran de clasificaciones más alta que la elegida)</label>
+                <input type="text" id="lista" class="form-control" list="datalista" placeholder="...">
+                <datalist id="datalista">
+                    <option value="publico">Todo público</option>
+                    <option value="supervision">Supervisión adulta</option>
+                    <option value="12">Para mayores de 12 años</option>
+                    <option value="15">Para mayores de 15 años</option>
+                    <option value="18">Para mayores de 18 años</option>
+                </datalist>
+            </div>
+
+            <div class="form-floating mb-5">
+                <textarea class="form-control" name="Comentarios" id="comentarios" placeholder="Ingrese comentario (opcional)"></textarea>
+                <label for="comentarios">Comentarios (opcional)</label>
+            </div>
+
+            <div class="text-center">
+                <button class="btn btn-primary" type="submit">Subir forma</button>
+            </div>
+        </form>
+    </div>
+
+    <footer class="container-fluid text-center w-100 bg-info-subtle p-2 d-flex flex-column" style="height: 10em; justify-content: space-between;">
+        <div>
+            <span class="d-block w-100">Alan Vaccalluzzo | alanvacc03@gmail.com</span>
+            <span class="d-block w-100">2023</span>
+        </div>
+        <div>
+            <span class="d-block w-100">Links:</span>
+            <ul class="list-group list-group-horizontal text-center justify-content-center list-unstyled">
+                <li><a href="" class="list-group-item list-group-item-primary link-primary link-underline-primary">Github</a></li>
+                <li><a href="" class="list-group-item list-group-item-primary link-primary link-underline-primary">Linkedin</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
